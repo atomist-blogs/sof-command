@@ -1,7 +1,5 @@
 # @atomist/sof-command
 
-[![Build Status](https://travis-ci.org/atomist/automation-seed-ts.svg?branch=master)](https://travis-ci.org/atomist/automation-seed-ts)
-
 This repository contains examples demonstrating use of
 the [Atomist][atomist] API.  You will find examples illustrating:
 
@@ -37,7 +35,7 @@ $ npm -v
 To get started run the following commands:
 
 ```
-$ git clone git@github.com:atomist-blog/sof-command.git
+$ git clone git@github.com:atomist-blogs/sof-command.git
 $ cd sof-command
 $ npm install
 ```
@@ -73,14 +71,7 @@ commit the file and push it to GitHub.com.*
 [token]: https://github.com/settings/tokens (GitHub Personal Access Tokens)
 
 The Atomist API will only allows members of the GitHub team
-`atomist-automation` to authenticate and register a new client.  If
-you followed the instructions above and have been invited to
-the [atomist-playground][play-gh] GitHub organization, you will have
-been added to this team in that organization.  If you are trying to
-run these automations in your own Slack team and GitHub organization,
-you will have to create a team in your GitHub organization named
-`atomist-automation` and add the users who want to create and register
-automations to it.
+`atomist-automation` to authenticate and register a new client. 
 
 ## Starting up the automation-client
 
@@ -109,7 +100,7 @@ and outgoing messages show up in the logs of your locally running
 automation-client.  Ultimately, you should see the response from the
 bot in Slack.
 
-[search]: https://github.com/atomist-blog/sof-command/blob/master/src/commands/SearchStackOverflow.ts (SearchStackOverflow Command Handler)
+[search]: https://github.com/atomist-blogs/sof-command/blob/master/src/commands/SearchStackOverflow.ts (SearchStackOverflow Command Handler)
 
 Feel free to modify the code in the `SearchStackOverflow` command handler,
 restart your local automation client, and see what happens!
