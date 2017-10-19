@@ -49,10 +49,8 @@ export class SearchStackOverflow implements HandleCommand {
 
     public handle(ctx: HandlerContext): Promise<HandlerResult> {
         return axios.get(`${apiSearchUrl}${encodeURIComponent(this.q)}`)
-            .then(res => Promise.resolve(this.handleResult(res, this.q)))
-            .then(msg => {
-                return ctx.messageClient.respond(msg);
-            })
+            .then(res => this.handleResult(res, this.q))
+            .then(msg => ctx.messageClient.respond(msg))
             .then(() => Success)
             .catch(error => failure(error));
     }
