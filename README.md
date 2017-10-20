@@ -14,7 +14,7 @@ module to implement a local client that connects to the Atomist API.
 
 ### Enroll the Atomist bot in your Slack team
 
-TODO
+<a href="https://atm.st/2wiDlUe">![](https://platform.slack-edge.com/img/add_to_slack@2x.png)</a>
 
 ### Node.js
 
