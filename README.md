@@ -59,11 +59,16 @@ team ID by typing `team` in a DM to the Atomist Bot.  If you do not
 supply the Slack team ID on the command line, the script will prompt
 you to enter it.
 
-The client needs a GitHub personal access token with `read:org` scope
-when connecting to the Atomist API.  The Atomist API will use the
-token to confirm you are who you say you are and are in a GitHub org
-connected to the Slack team in which you are running the automations.
-In addition, the Atomist API only allows members of the GitHub team
+The `atomist-config` will prompt you for your GitHub credentials.  It
+needs them to create the GitHub personal access token with `read:org`
+scope.  We do not store your credentials and only write the token to
+your local machine.
+
+The Atomist API client sends GitHub personal access token when
+connecting to the Atomist API.  The Atomist API will use the token to
+confirm you are who you say you are and are in a GitHub org connected
+to the Slack team in which you are running the automations.  In
+addition, the Atomist API only allows members of the GitHub team
 `atomist-automation` to authenticate and register a new client.  If
 you followed the instructions above and have been invited to
 the [atomist-playground][play-gh] GitHub organization, you will have
