@@ -44,7 +44,7 @@ const thumbUrl = "https://slack-imgs.com/?c=1&o1=wi75.he75&url=https%3A%2F%2Fcdn
 @Tags("stack-overflow")
 export class SearchStackOverflow implements HandleCommand {
 
-    @Parameter({description: "your search query", pattern: /^.*$/})
+    @Parameter({ description: "your search query", pattern: /^.*$/ })
     public q: string;
 
     public handle(ctx: HandlerContext): Promise<HandlerResult> {
@@ -58,7 +58,7 @@ export class SearchStackOverflow implements HandleCommand {
     private handleResult(result: AxiosResponse, query: string): SlackMessage {
         const data = result.data;
         const msg: SlackMessage = {};
-        msg.attachments = (data.items.map( (i: any) => {
+        msg.attachments = (data.items.map((i: any) => {
             const attachment: Attachment = {
                 fallback: i.title,
                 author_name: i.owner.display_name,
