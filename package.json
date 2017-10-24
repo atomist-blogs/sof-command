@@ -61,7 +61,7 @@
     "start": "npm-run-all compile git:info start:client",
     "start:client": "atomist-client --open=true",
     "start:server": "atomist-client",
-    "test": "mocha --compilers ts:espower-typescript/guess 'test/**/*.ts'",
+    "test": "mocha --compilers ts:espower-typescript/guess \"test/**/*.ts\"",
     "test:one": "mocha --compilers ts:espower-typescript/guess \"test/**/${TEST:-*.ts}\"",
     "typedoc": "typedoc --mode modules --excludeExternals",
     "watch:compile": "tsc --project . --watch",
