@@ -51,8 +51,7 @@ export class SearchStackOverflow implements HandleCommand {
         return axios.get(`${apiSearchUrl}${encodeURIComponent(this.q)}`)
             .then(res => this.handleResult(res, this.q))
             .then(msg => ctx.messageClient.respond(msg))
-            .then(() => Success)
-            .catch(error => failure(error));
+            .then(() => Success, failure);
     }
 
     private handleResult(result: AxiosResponse, query: string): SlackMessage {
