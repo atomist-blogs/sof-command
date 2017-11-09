@@ -60,7 +60,6 @@ describe("SearchStackOverflow", () => {
         const promise = searchSo.handle(ctx as HandlerContext);
         promise.then(result => {
             assert(result.code === 0);
-            done();
-        }).catch(done);
+        }).then(done, done);
     }
 });

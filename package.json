@@ -61,8 +61,8 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "atomist-client",
     "start:client": "atomist-client --open=true",
-    "test": "mocha --compilers ts:espower-typescript/guess 'test/**/*.ts'",
-    "test:one": "mocha --compilers ts:espower-typescript/guess \"test/**/${TEST:-*.ts}\"",
+    "test": "mocha --require espower-typescript/guess 'test/**/*.ts'",
+    "test:one": "mocha --require espower-typescript/guess \"test/**/${TEST:-*.ts}\"",
     "typedoc": "typedoc --mode modules --excludeExternals",
     "watch:compile": "tsc --project . --watch",
     "watch": "supervisor --watch build --quiet --exec npm -- run start"
