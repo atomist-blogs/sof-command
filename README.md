@@ -123,7 +123,7 @@ at [atomist-community.slack.com][slack].
 
 If you find a problem, please create an [issue][].
 
-[issue]: https://github.com/atomist/automation-seed-ts/issues
+[issue]: https://github.com/atomist/sof-command/issues
 
 ## Development
 
@@ -147,8 +147,7 @@ Command | Reason
 To create a new release of the project, simply push a tag of the form
 `M.N.P` where `M`, `N`, and `P` are integers that form the next
 appropriate [semantic version][semver] for release.  The version in
-the package.json is replaced by the build and is totally ignored!  For
-example:
+the package.json must match the tag.  For example:
 
 [semver]: http://semver.org
 
