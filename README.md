@@ -12,7 +12,9 @@ the [`@atomist/automation-client`][client] node module.
 
 ### Enroll the Atomist bot in your Slack team
 
-<a href="https://atm.st/2wiDlUe">![](https://platform.slack-edge.com/img/add_to_slack@2x.png)</a>
+<p align="center">
+  <img alt="Add to Slack" height="50" width="174" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" />
+</p>
 
 ### Node.js
 
@@ -30,12 +32,14 @@ $ npm -v
 
 ### Cloning the repository and installing dependencies
 
-To get started run the following commands:
+To get started run the following commands to clone the project,
+install its dependencies, and build the project:
 
 ```
 $ git clone git@github.com:atomist-blogs/sof-command.git
 $ cd sof-command
 $ npm install
+$ npm run build
 ```
 
 ### Configuring your environment
