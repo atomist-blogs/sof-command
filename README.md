@@ -69,12 +69,7 @@ token to your local machine.
 The Atomist API client sends GitHub personal access token when
 connecting to the Atomist API.  The Atomist API will use the token to
 confirm you are who you say you are and are in a GitHub org connected
-to the Slack team in which you are running the automations.  In
-addition, the Atomist API only allows members of the GitHub team
-`atomist-automation` to authenticate and register a new client.  You
-will have to create a team in your GitHub organization named
-`atomist-automation` and add the users who want to create and register
-automations to it.
+to the Slack team in which you are running the automations.
 
 [token]: https://github.com/settings/tokens (GitHub Personal Access Tokens)
 
