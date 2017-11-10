@@ -110,15 +110,6 @@ bot in Slack.
 Feel free to modify the code in the `SearchStackOverflow` command handler,
 restart your local automation client, and see what happens!
 
-## Dashboard and GraphQL data explorer
-
-When the automation client has successfully established a connection
-to the Atomist API server, the Dashboard (work-in-progress) and
-GraphQL data explorer will be available.
-
-*   Dashboard: http://localhost:2866
-*   GraphQL Data Explorer: http://localhost:2866/graphql
-
 ## Support
 
 General support questions should be discussed in the `#support`
