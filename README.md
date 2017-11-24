@@ -46,10 +46,10 @@ $ npm run build
 
 If this is the first time you will be running an Atomist API client
 locally, you should first configure your system using the
-`atomist-config` script:
+`atomist config` script:
 
 ```
-$ `npm bin`/atomist-config [SLACK_TEAM_ID]
+$ `npm bin`/atomist config
 ```
 
 The script does two things: records what Slack team you want your
@@ -61,7 +61,7 @@ member.  You can get your Slack team ID by typing `team` in a DM to
 the Atomist Bot.  If you do not supply the Slack team ID on the
 command line, the script will prompt you to enter it.
 
-The `atomist-config` script will prompt you for your GitHub
+The `config` script will prompt you for your GitHub
 credentials.  It needs them to create the GitHub personal access
 token.  Atomist does not store your credentials and only writes the
 token to your local machine.
