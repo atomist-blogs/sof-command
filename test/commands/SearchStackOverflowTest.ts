@@ -29,13 +29,13 @@ describe("SearchStackOverflow", () => {
     const searchSo = new SearchStackOverflow();
     const teamId = "T79TH";
 
-    it("should response with a properly formatted search results", done => {
-        executeSearchAndVerify("Atomist", msg => {
+    it("should respond with properly formatted search results", done => {
+        executeSearchAndVerify("JavaScript", msg => {
             assert(msg.attachments.length > 0);
         }, done);
     });
 
-    it("should response with a hint for no search results", done => {
+    it("should respond with a hint for no search results", done => {
         executeSearchAndVerify("wöagljkarslödlbghksdöaofäp#aklsgöd", msg => {
             assert(msg.text === "No results found");
         }, done);
