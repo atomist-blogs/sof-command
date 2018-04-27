@@ -23,9 +23,9 @@ right versions are installed, please run:
 
 ```
 $ node -v
-v8.4.0
+v9.5.0
 $ npm -v
-5.4.1
+5.6.0
 ```
 
 [node]: https://nodejs.org/ (Node.js)
@@ -42,11 +42,19 @@ $ npm install
 $ npm run build
 ```
 
+### Handy command line
+
+Installing the client globally will give you quick access to useful shortcuts.
+
+npm install -g @atomist/automation-client
+
 ### Configuring your environment
 
-If this is the first time you will be running an Atomist API client
-locally, you should first configure your system using the
-`atomist config` script:
+If this is the first time you will be running an Atomist API client locally, you should first configure your system using the atomist script:
+
+```
+$ atomist config
+```
 
 ```
 $ `npm bin`/atomist config
@@ -71,6 +79,9 @@ connecting to the Atomist API.  The Atomist API will use the token to
 confirm you are who you say you are and are in a GitHub org connected
 to the Slack team in which you are running the automations.
 
+If you prefer, you can also [configure manually][manual] with environment variables.
+
+[manual]: https://github.com/atomist/welcome/blob/master/manualConfiguration.md
 [token]: https://github.com/settings/tokens (GitHub Personal Access Tokens)
 
 ## Starting up the automation-client
@@ -78,7 +89,7 @@ to the Slack team in which you are running the automations.
 To start the client, run the following command:
 
 ```
-$ npm run autostart
+$ atomist start
 ```
 
 ## Invoking a command handler from Slack
@@ -131,25 +142,6 @@ Command | Reason
 `npm test` | to run tests and ensure everything is working
 `npm run autotest` | run tests continuously
 `npm run clean` | remove stray compiled JavaScript files and build directory
-
-### Release
-
-To create a new release of the project, simply push a tag of the form
-`M.N.P` where `M`, `N`, and `P` are integers that form the next
-appropriate [semantic version][semver] for release.  The version in
-the package.json must match the tag.  For example:
-
-[semver]: http://semver.org
-
-```
-$ git tag -a 1.2.3
-$ git push --tags
-```
-
-The Travis CI build (see badge at the top of this page) will publish
-the NPM module and automatically create a GitHub release using the tag
-name for the release and the comment provided on the annotated tag as
-the contents of the release notes.
 
 ---
 

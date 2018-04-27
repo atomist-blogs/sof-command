@@ -18,7 +18,7 @@
     "url": "https://github.com/atomist-blogs/sof-command/issues"
   },
   "dependencies": {
-    "@atomist/automation-client": "^0.6.6",
+    "@atomist/automation-client": "https://r.atomist.com/Hy4AGJEEsz",
     "@atomist/slack-messages": "^0.12.1",
     "app-root-path": "^2.0.1",
     "axios": "^0.18.0"
@@ -47,7 +47,7 @@
   "scripts": {
     "autostart": "npm-run-all --print-label --parallel watch:compile watch",
     "autotest": "supervisor --watch src,test --extensions ts --no-restart-on exit --quiet --exec npm -- test",
-    "build": "npm-run-all lint compile test",
+    "build": "npm-run-all compile test",
     "clean": "npm-run-all clean:js clean:build",
     "clean:build": "rimraf *-v8.log profile.txt build",
     "clean:dist": "npm-run-all clean clean:npm",
@@ -57,7 +57,7 @@
     "compile:gql": "copyfiles './src/**/*.graphql' ./build",
     "compile:ts": "tsc --project .",
     "fmt": "tsfmt --replace",
-    "git:info": "git-info",
+    "git:info": "atomist git",
     "gql:gen": "gql-gen --file node_modules/@atomist/automation-client/graph/schema.cortex.json --template typescript -m --out ./src/typings/ './graphql/**/*.graphql'",
     "lint": "tslint --format verbose --project . --exclude '{build,node_modules}/**' '**/*.ts'",
     "lint:fix": "npm run lint -- --fix",
